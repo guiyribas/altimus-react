@@ -8,7 +8,7 @@ function Home() {
   const history = useHistory();
   return (
     <React.Fragment>
-        <div class='center-content'>
+        <div className='center-content'>
           <div>
             <h1>Altimus</h1>
             <h2>Bem-vindo ao projeto avaliação React</h2>

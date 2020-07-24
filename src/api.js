@@ -98,6 +98,11 @@ export const deleteVehicle = (id) => {
 
   delete VEHICLES[index];
 
+  // const index = array.indexOf(id);
+  // if (index > -1) {
+  //   array.splice(index, 1);
+  // }
+
   console.log(VEHICLES);
 
   return new Promise((resolve) =>

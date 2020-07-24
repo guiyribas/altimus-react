@@ -69,7 +69,7 @@ function Vehicles() {
     );
   };
 
-  const actionDeleteVehicle = () => {
+  const actionDeleteVehicle = (vehicle) => {
     //refatorar
     return (
       <React.Fragment>
@@ -85,7 +85,7 @@ function Vehicles() {
           visible={displayBasic}
           style={{ width: '50vw' }}
           onHide={() => onHide(setDisplayBasic)}
-          footer={renderFooter(setDisplayBasic)}
+          footer={renderFooter(setDisplayBasic, vehicle.id)}
         >
           <p>Deseja realmente excluir este veículo?</p>
         </Dialog>
@@ -100,23 +100,22 @@ function Vehicles() {
     });
   }
 
-  const onHide = (stateMethod, confirmButton) => {
+  const onHide = (stateMethod, confirmButton, id) => {
+    console.log('aaaaaaaaaaaaaaaaaaaaaaaa ', id)
     stateMethod(false);
     if (confirmButton) {
       //const veiculo = await fetchVehicles(placa.placaNumber);
-      console.log('clicou no sim');
-    } else {
-      console.log('clicou no nao');
+      console.log('clicou no sim', id);
     }
   };
 
-  const renderFooter = (stateMethod) => {
+  const renderFooter = (stateMethod, id) => {
     return (
       <div>
         <Button
           label='Sim'
           icon='pi pi-check'
-          onClick={() => onHide(stateMethod, true)}
+          onClick={() => onHide(stateMethod, true, id)}
         />
         <Button
           label='Não'
