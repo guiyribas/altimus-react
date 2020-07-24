@@ -57,7 +57,6 @@ function Vehicles() {
   };
 
   const actionEditVehicle = (vehicle) => {
-    console.log(vehicle);
     return (
       <Button
         type='button'
@@ -101,11 +100,10 @@ function Vehicles() {
   }
 
   const onHide = (stateMethod, confirmButton, id) => {
-    console.log('aaaaaaaaaaaaaaaaaaaaaaaa ', id)
-    stateMethod(false);
+    // stateMethod(false);
+    setDisplayBasic(false);
     if (confirmButton) {
-      //const veiculo = await fetchVehicles(placa.placaNumber);
-      console.log('clicou no sim', id);
+      deleteVehicle(id);
     }
   };
 
@@ -120,7 +118,7 @@ function Vehicles() {
         <Button
           label='Não'
           icon='pi pi-times'
-          onClick={() => onHide(stateMethod, false)}
+          onClick={() => onHide(stateMethod, false, id)}
           className='p-button-secondary'
         />
       </div>

@@ -96,12 +96,11 @@ export const saveVehicle = (vehicle, id) => {
 export const deleteVehicle = (id) => {
   const index = VEHICLES.findIndex((v) => v.id === id);
 
-  delete VEHICLES[index];
+  // delete VEHICLES[index];
 
-  // const index = array.indexOf(id);
-  // if (index > -1) {
-  //   array.splice(index, 1);
-  // }
+  if (index > -1) {
+    VEHICLES.splice(index, 1);
+  }
 
   console.log(VEHICLES);
 

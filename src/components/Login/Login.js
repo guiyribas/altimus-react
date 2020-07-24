@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
-import './Login.css';
 import { fetchLogin } from '../../api';
 import { useHistory } from 'react-router-dom';
 

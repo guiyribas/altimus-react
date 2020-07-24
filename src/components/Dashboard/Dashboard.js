@@ -40,7 +40,7 @@ function Dashboard() {
       <div>
         <Button icon='pi pi-list' onClick={() => setVisible(!visible)} />
       </div>
-      <div class='center-content'>
+      <div className='center-content'>
         <div>
           <h1>Dashboard</h1>
         </div>
