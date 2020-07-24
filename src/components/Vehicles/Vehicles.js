@@ -86,7 +86,7 @@ function Vehicles() {
           onHide={() => onHide(setDisplayBasic)}
           footer={renderFooter(setDisplayBasic, vehicle.id)}
         >
-          <p>Deseja realmente excluir este veículo?</p>
+          <h4>Deseja realmente excluir este veículo?</h4>
         </Dialog>
       </React.Fragment>
     );
